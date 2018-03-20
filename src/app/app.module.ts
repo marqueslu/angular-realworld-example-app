@@ -16,6 +16,8 @@ import {
   SharedModule,
   UserService
 } from './shared';
+import { SettingsComponent } from './settings/settings.component';
+import { SettingsModule } from './settings/settings.module';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
@@ -23,14 +25,16 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
     AuthModule,
-    SharedModule,
     HomeModule,
-    rootRouting
+    rootRouting,
+    SharedModule,
+    SettingsModule
   ],
   providers: [ApiService, AuthGuard, JwtService, UserService],
   bootstrap: [AppComponent]
