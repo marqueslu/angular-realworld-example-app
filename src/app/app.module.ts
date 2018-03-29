@@ -1,3 +1,4 @@
+import { ProfileModule } from './profile/profile.module';
 import { SettingsModule } from './settings/settings.module';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,10 +15,12 @@ import {
   FooterComponent,
   HeaderComponent,
   JwtService,
+  ProfilesService,
   SharedModule,
   UserService
 } from './shared';
 import { SettingsComponent } from './settings/settings.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
@@ -31,11 +34,12 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     BrowserModule,
     AuthModule,
     HomeModule,
+    ProfileModule,
     rootRouting,
     SharedModule,
     SettingsModule
   ],
-  providers: [ApiService, AuthGuard, JwtService, UserService],
+  providers: [ApiService, AuthGuard, JwtService, UserService, ProfilesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
