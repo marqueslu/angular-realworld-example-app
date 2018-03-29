@@ -1,13 +1,15 @@
-import { Router } from '@angular/router';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { User, UserService } from '../shared';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { User, UserService } from '../shared';
 
 @Component({
   selector: 'settings-page',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.css']
 })
+
 export class SettingsComponent implements OnInit {
 
   user: User = new User();
