@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { ListErrorsComponent } from './list-errors.component';
+import { FollowButtonComponent } from './buttons';
 
 @NgModule({
   imports: [
@@ -15,9 +16,10 @@ import { ListErrorsComponent } from './list-errors.component';
     HttpModule,
     RouterModule
   ],
-  declarations: [ListErrorsComponent, ShowAuthedDirective],
+  declarations: [ListErrorsComponent, ShowAuthedDirective, FollowButtonComponent],
   exports: [
     CommonModule,
+    FollowButtonComponent,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
