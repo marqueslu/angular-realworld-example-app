@@ -6,7 +6,8 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { ListErrorsComponent } from './list-errors.component';
-import { FollowButtonComponent } from './buttons';
+import { FollowButtonComponent, FavoriteButtonComponent } from './buttons';
+import { ArticleMetaComponent } from './article-helpers';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { FollowButtonComponent } from './buttons';
     HttpModule,
     RouterModule
   ],
-  declarations: [ListErrorsComponent, ShowAuthedDirective, FollowButtonComponent],
+  declarations: [ArticleMetaComponent, ListErrorsComponent, ShowAuthedDirective, FollowButtonComponent, FavoriteButtonComponent],
   exports: [
     CommonModule,
     FollowButtonComponent,
@@ -24,7 +25,10 @@ import { FollowButtonComponent } from './buttons';
     ReactiveFormsModule,
     HttpModule,
     ListErrorsComponent,
-    RouterModule, ShowAuthedDirective
+    RouterModule, 
+    ShowAuthedDirective,
+    ArticleMetaComponent,
+    FavoriteButtonComponent
   ]
 })
 export class SharedModule {}
