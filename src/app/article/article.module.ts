@@ -1,3 +1,4 @@
+import { ArticleCommentComponent } from './article-comment.component';
 import { MarkdownPipe } from './markdown.pipe';
 import { SharedModule } from './../shared/shared.module';
 import { ArticleComponent } from './article.component';
@@ -21,7 +22,8 @@ const articleRouting: ModuleWithProviders = RouterModule.forChild([
     ],
     declarations: [
         ArticleComponent,
-        MarkdownPipe
+        MarkdownPipe,
+        ArticleCommentComponent
     ],
     providers: [
         ArticleResolver

@@ -11,7 +11,7 @@ import { Article } from '../models';
 export class ArticlesService {
     constructor(
         private apiService: ApiService
-    ) { }
+    ) {}
 
     get(slug): Observable<Article> {
         return this.apiService.get('/articles/' + slug)

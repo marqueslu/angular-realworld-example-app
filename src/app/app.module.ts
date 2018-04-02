@@ -20,7 +20,8 @@ import {
   JwtService,
   ProfilesService,
   SharedModule,
-  UserService
+  UserService,
+  CommentService
 } from './shared';
 import { SettingsComponent } from './settings/settings.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -45,7 +46,7 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     SettingsModule,
     ArticleModule
   ],
-  providers: [ApiService, ArticlesService, AuthGuard, JwtService, UserService, ProfilesService],
+  providers: [ApiService, ArticlesService, AuthGuard, JwtService, UserService, ProfilesService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
