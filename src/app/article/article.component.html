@@ -49,9 +49,9 @@
     <div class="article-actions">
       <article-meta [article]="article">
         <span [hidden]="!canModify">
-          <a [routerLink]="['/editor', article.slug]" class="btn-sm btn-outline-secondary">
+          <a [routerLink]="['/editor', article.slug]" class="btn btn-sm btn-outline-secondary">
             <i class="ion-edit"></i>Edit Article</a>
-          <button class="btn-sm btn-outline-danger" [ngClass]="{disabled: isDeleting}" (click)="deleteArticle()">
+          <button class="btn btn-sm btn-outline-danger" [ngClass]="{disabled: isDeleting}" (click)="deleteArticle()">
             <i class="ion-trash-a"></i>Delete Article
           </button>
         </span>
@@ -86,7 +86,7 @@
             </div>
             <div class="card-footer">
               <img [src]="currentUser.image" class="comment-author-img" />
-              <button class="btn btn-sm btn-sm-primary" type="submit">
+              <button class="btn btn-sm btn-primary" type="submit">
                 Post Comment
               </button>
             </div>  

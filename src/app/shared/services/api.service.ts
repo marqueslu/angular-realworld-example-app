@@ -15,12 +15,12 @@ export class ApiService{
 
     private setHeaders(): Headers{
         let headersConfig = {
-            'content-type': 'application/json',
+            'Content-Type': 'application/json',
             'Accept' : 'application/json'
         };
 
         if(this.jwtService.getToken()){
-            headersConfig['Auhorization'] = `Token ${this.jwtService.getToken()}`;
+            headersConfig['Authorization'] = `Token ${this.jwtService.getToken()}`;
         }
 
         return new Headers(headersConfig);

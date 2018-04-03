@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 import { Comment } from '../models';
 @Injectable()
-export class CommentService{
+export class CommentsService{
     constructor(
         private apiService: ApiService
     ){}

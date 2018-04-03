@@ -5,7 +5,7 @@
         </p>
     </div>
     <div class="card-footer">
-        <a class="comment-author" routerLink="['/profile', comment.author.username]">
+        <a class="comment-author" [routerLink]="['/profile', comment.author.username]">
             {{ comment.author.username }}
         </a>
 
@@ -13,7 +13,7 @@
             {{ comment.createdAt | date : 'longDate' }}
         </span>
 
-        <span class="mod-option" [hidden]="!canModify">
+        <span class="mod-options" [hidden]="!canModify">
             <i class="ion-trash-a" (click)="deleteClicked()"></i>
         </span>
     </div>

@@ -4,7 +4,7 @@ import {
   Article,
   ArticlesService,
   Comment,
-  CommentService,
+  CommentsService,
   User,
   UserService
 } from '../shared';
@@ -30,7 +30,7 @@ export class ArticleComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private articlesService: ArticlesService,
-    private commentService: CommentService,
+    private commentsService: CommentsService,
     private router: Router,
     private userService: UserService
   ) { }
@@ -81,7 +81,7 @@ export class ArticleComponent implements OnInit {
 
 
   populateComments() {
-    this.commentService.getAll(this.article.slug)
+    this.commentsService.getAll(this.article.slug)
       .subscribe(comments => this.comments = comments);
   }
 
@@ -90,7 +90,7 @@ export class ArticleComponent implements OnInit {
     this.commentFormErrors = {};
 
     let commentBody = this.commentControl.value;
-    this.commentService
+    this.commentsService
       .add(this.article.slug, commentBody)
       .subscribe(
         comment => {
@@ -106,7 +106,7 @@ export class ArticleComponent implements OnInit {
   }
 
   onDeleteComment(comment){
-    this.commentService.destroy(comment.id, this.article.slug)
+    this.commentsService.destroy(comment.id, this.article.slug)
     .subscribe(
       success => {
         this.comments = this.comments.filter((item) => item !== comment);

@@ -5,6 +5,6 @@ import * as marked from 'marked';
 
 export class MarkdownPipe implements PipeTransform {
     transform(content: string): string{
-        return marked(content, {sinalize: true});
+        return marked(content, { sanitize: true });
     }
 }

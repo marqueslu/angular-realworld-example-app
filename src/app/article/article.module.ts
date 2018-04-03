@@ -1,6 +1,6 @@
 import { ArticleCommentComponent } from './article-comment.component';
 import { MarkdownPipe } from './markdown.pipe';
-import { SharedModule } from './../shared/shared.module';
+import { SharedModule } from './../shared';
 import { ArticleComponent } from './article.component';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { ArticleResolver } from './article-resolver.service';

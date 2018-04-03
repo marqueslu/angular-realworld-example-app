@@ -4,4 +4,4 @@ export * from './jwt.service';
 export * from './user.service';
 export * from './auth-guard.service';
 export * from './profiles.service';
-export * from './comment.service';
+export * from './comments.service';
