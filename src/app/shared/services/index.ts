@@ -5,3 +5,4 @@ export * from './user.service';
 export * from './auth-guard.service';
 export * from './profiles.service';
 export * from './comments.service';
+export * from './tags.service';
